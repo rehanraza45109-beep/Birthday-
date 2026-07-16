@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Maaya ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(135deg,
+#ff4f96 0%,
+#ff77b8 50%,
+#ffd4ea 100%);
+
+padding:20px;
+
+overflow-x:hidden;
+overflow-y:auto;
+
+}
+
+/* ==========================
+LOCK SCREEN
+========================== */
+
+.lockScreen{
+
+width:340px;
+
+padding:30px;
+
+border-radius:32px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(22px);
+
+border:2px solid rgba(255,255,255,.28);
+
+box-shadow:
+
+0 0 30px rgba(255,20,147,.25),
+
+0 0 80px rgba(255,20,147,.10);
+
+text-align:center;
+
+animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(35px)
+scale(.95);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+.lockScreen h1{
+
+color:white;
+
+font-size:32px;
+
+font-weight:700;
+
+margin-bottom:8px;
+
+}
+
+.lockScreen p{
+
+color:white;
+
+font-size:15px;
+
+opacity:.92;
+
+margin-bottom:22px;
+
+}
+
+/* ==========================
+PIN DOTS
+========================== */
+
+.pinDots{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+margin-bottom:25px;
+
+}
+
+.pinDots span{
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+border:2px solid white;
+
+background:rgba(255,255,255,.28);
+
+transition:.3s;
+
+}
+
+.pinDots span.active{
+
+background:white;
+
+box-shadow:
+
+0 0 10px white,
+
+0 0 25px white;
+
+}
+
+/* ==========================
+KEYPAD
+========================== */
+
+.keypad{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,80px);
+
+gap:15px;
+
+justify-content:center;
+
+}
+
+.key{
+
+height:70px;
+
+border-radius:50%;
+
+background:
+rgba(255,255,255,.20);
+
+border:
+2px solid rgba(255,255,255,.30);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:26px;
+
+font-weight:700;
+
+color:white;
+
+cursor:pointer;
+
+transition:.2s;
+
+user-select:none;
+
+}
+
+.key:active{
+
+transform:scale(.92);
+
+background:
+rgba(255,255,255,.38);
+
+}
+
+.message{
+
+margin-top:20px;
+
+font-size:15px;
+
+color:white;
+
+min-height:20px;
+
+}
+
+@keyframes shake{
+
+0%{transform:translateX(0);}
+25%{transform:translateX(-8px);}
+50%{transform:translateX(8px);}
+75%{transform:translateX(-8px);}
+100%{transform:translateX(0);}
+
+}
+
+.shake{
+
+animation:shake .35s;
+
+}
+
+/* ==========================
+PREMIUM CARD
+========================== */
+
+.card{
+
+width:340px;
+
+padding:34px 28px 30px;
+
+border-radius:32px;
+
+background:
+rgba(255,255,255,.18);
+
+backdrop-filter:blur(22px);
+
+border:
+2px solid rgba(255,255,255,.28);
+
+box-shadow:
+
+0 0 30px rgba(255,20,147,.25),
+
+0 0 80px rgba(255,20,147,.10);
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+animation:fade .8s ease;
+
+}
+/* ==========================
+TITLE
+========================== */
+
+.title{
+
+font-family:'Great Vibes',cursive;
+
+font-size:68px;
+
+font-weight:400;
+
+line-height:.88;
+
+color:#fff;
+
+text-shadow:
+0 0 8px #fff,
+0 0 18px #fff,
+0 0 35px #ff8bc4,
+0 0 70px #ff1493;
+
+margin:0;
+
+}
+
+/* Happy aur Birthday ke beech perfect gap */
+
+.title br{
+display:block;
+content:"";
+margin:4px 0;
+}
+
+/* ==========================
+NAME
+========================== */
+
+.name{
+
+font-family:'Great Vibes',cursive;
+
+font-size:56px;
+
+font-weight:400;
+
+line-height:1;
+
+color:#fff;
+
+margin:10px 0 20px;
+
+text-shadow:
+0 0 8px #fff,
+0 0 18px #fff,
+0 0 35px #ff8bc4,
+0 0 70px #ff1493;
+
+}
+
+.heart{
+
+font-size:18px;
+
+vertical-align:middle;
+
+margin-left:4px;
+
+animation:heartBeat 1.5s infinite;
+
+}
+
+@keyframes heartBeat{
+
+0%,100%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.15);
+}
+
+}
+
+/* ==========================
+MESSAGE
+========================== */
+
+.card .message{
+
+color:#fff;
+
+font-size:17px;
+
+font-weight:400;
+
+line-height:1.45;
+
+text-align:center;
+
+margin:0;
+
+}
+
+.card .message p{
+
+margin:0;
+
+}
+
+.card .message p + p{
+
+margin-top:8px;
+
+}
+
+/* ==========================
+BUTTON
+========================== */
+
+.startBtn{
+
+margin-top:28px;
+
+width:100%;
+
+height:58px;
+
+border:none;
+
+border-radius:18px;
+
+background:
+linear-gradient(135deg,#ff197d,#ff4da6);
+
+color:white;
+
+font-size:20px;
+
+font-weight:700;
+
+cursor:pointer;
+
+box-shadow:
+0 8px 25px rgba(255,20,147,.35);
+
+transition:.3s;
+
+}
+
+.startBtn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 12px 35px rgba(255,20,147,.45);
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOCK SCREEN -->
+
+<div class="lockScreen" id="lockScreen">
+
+<h1>🔒 Enter PIN</h1>
+
+<p>Only Maaya can unlock this 💖</p>
+
+<div class="pinDots">
+<span id="d1"></span>
+<span id="d2"></span>
+<span id="d3"></span>
+<span id="d4"></span>
+</div>
+
+<div class="keypad">
+
+<div class="key" onclick="press('1')">1</div>
+<div class="key" onclick="press('2')">2</div>
+<div class="key" onclick="press('3')">3</div>
+
+<div class="key" onclick="press('4')">4</div>
+<div class="key" onclick="press('5')">5</div>
+<div class="key" onclick="press('6')">6</div>
+
+<div class="key" onclick="press('7')">7</div>
+<div class="key" onclick="press('8')">8</div>
+<div class="key" onclick="press('9')">9</div>
+
+<div class="key" onclick="clearPin()">⌫</div>
+<div class="key" onclick="press('0')">0</div>
+<div class="key" onclick="checkPin()">✓</div>
+
+</div>
+
+<div class="message" id="msg"></div>
+
+</div>
+
+<!-- PREMIUM BIRTHDAY PAGE -->
+
+<div id="mainPage" style="display:none;justify-content:center;align-items:center;">
+
+<div class="card">
+
+<h1 class="title">
+Happy
+<br>
+Birthday
+</h1>
+
+<h2 class="name">
+Maaya <span class="heart">❤</span>
+</h2>
+
+<div class="message">
+
+<p>Welcome to your special surprise.</p>
+
+<p>Today isn't just your birthday...</p>
+
+<p>Today is the day my favourite person<br>
+came into this world. ❤️</p>
+
+</div>
+
+<button class="startBtn" onclick="startJourney()">
+
+✨ Start Our Journey ✨
+
+</button>
+
+</div>
+
+</div>
+<!-- LETTER PAGE -->
+
+<div id="letterPage" style="display:none;justify-content:center;align-items:center;">
+
+<div class="card">
+
+<h1 class="title">
+For You 
+</h1>
+
+<div class="message">
+
+
+<p>My Dearest Maaya,</p>
+
+<p>Today isn't just your birthday...</p>
+
+<p>It's the day the world became more beautiful because you were born. ❤️</p>
+
+<p>Thank you for every smile, every laugh and every beautiful memory.</p>
+
+<p>Happy Birthday, my favourite person. 🎂❤️</p>
+
+</div>
+
+<button class="startBtn" onclick="nextPage()">
+✨ Continue ✨
+</button>
+
+</div>
+
+</div>
+<script>
+
+let pin = "";
+
+function updateDots(){
+
+for(let i=1;i<=4;i++){
+document.getElementById("d"+i).classList.remove("active");
+}
+
+for(let i=1;i<=pin.length;i++){
+document.getElementById("d"+i).classList.add("active");
+}
+
+}
+
+function press(num){
+
+if(pin.length<4){
+pin += num;
+updateDots();
+}
+
+}
+
+function clearPin(){
+
+pin = pin.slice(0,-1);
+updateDots();
+
+}
+
+function checkPin(){
+
+if(pin === "1707"){
+
+document.getElementById("lockScreen").style.display = "none";
+document.getElementById("mainPage").style.display = "flex";
+
+}else{
+
+document.getElementById("msg").innerHTML = "❌ Wrong PIN";
+
+document.getElementById("lockScreen").classList.add("shake");
+
+setTimeout(function(){
+
+document.getElementById("lockScreen").classList.remove("shake");
+document.getElementById("msg").innerHTML = "";
+pin = "";
+updateDots();
+
+},600);
+
+}
+
+}
+
+function startJourney(){
+
+    document.getElementById("mainPage").style.display = "none";
+    document.getElementById("letterPage").style.display = "flex";
+
+}
+function nextPage(){
+  window.location.href = "gallery.html";
+
+    
+
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>

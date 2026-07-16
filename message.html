@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Surprise ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:22px;
+animation:floatUp 8s linear infinite;
+opacity:.8;
+pointer-events:none;
+z-index:999;
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+10%{
+opacity:1;
+}
+100%{
+transform:translateY(-110vh) rotate(360deg);
+opacity:0;
+}
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:linear-gradient(135deg,#ff9ecf,#ffd6e7);
+overflow:hidden;
+}
+
+.card{
+width:90%;
+max-width:420px;
+background:rgba(255,255,255,.2);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+animation:pop 1s;
+}
+
+h1{
+font-family:"Great Vibes",cursive;
+font-size:55px;
+color:white;
+margin-bottom:20px;
+}
+
+p{
+color:white;
+font-size:18px;
+line-height:1.8;
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#ff2f92;
+color:white;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+}
+
+@keyframes pop{
+from{
+transform:scale(.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+#secretBtn{
+margin-top:20px;
+padding:12px 28px;
+background:#ff4f9a;
+color:white;
+border:none;
+border-radius:40px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 20px #ff4f9a;
+animation:pulse 1.5s infinite;
+}
+
+#secretBox{
+margin-top:30px;
+font-family:"Great Vibes",cursive;
+font-size:50px;
+color:white;
+text-shadow:0 0 15px #ff2f92;
+min-height:70px;
+opacity:0;
+transition:.5s;
+}
+
+@keyframes pulse{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.08);
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Happy Birthday ❤️</h1>
+
+<p>
+
+May your smile always stay this beautiful.
+
+May every dream of yours come true.
+
+Thank you for being such a wonderful person.
+
+I hope this little surprise made you smile.
+
+🎂❤️✨
+
+</p>
+<button id="secretBtn" onclick="showSecret()">
+Touch for a Little Surprise
+</button>
+
+<div id="secretBox"></div>
+
+</div>
+<script>
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+
+}
+
+setInterval(createHeart,400);
+
+</script>
+<script>
+function showSecret(){
+
+document.getElementById("secretBtn").style.display="none";
+
+const box=document.getElementById("secretBox");
+
+const words=[
+"I Love You",
+"Ever",
+"Ever",
+"Forever ♾️"
+];
+
+let i=0;
+
+function next(){
+
+box.style.opacity="0";
+
+setTimeout(()=>{
+
+box.innerHTML=words[i];
+box.style.opacity="1";
+
+i++;
+
+if(i<words.length){
+setTimeout(next,2000);
+}
+
+},300);
+
+}
+
+next();
+
+}
+</script>
+</body>
+</html>
